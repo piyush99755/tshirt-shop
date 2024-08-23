@@ -1,5 +1,7 @@
 
 import './App.css';
+import Item from './components/item';
+import OrderSummary from './components/OrderSummary';
 
 
 function App() {
@@ -123,163 +125,23 @@ function App() {
        
     }];
 
+    let itemsInBag = items.filter(item => item.isInBag);
+
   return(
     <>
-           <section className="items">
-                <h1>{shopName}</h1>
-                
-                <div className="product selected">
-                    <div className="photo">
-                        <img src="././img/img1.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">Joker</span>
-                        <span className="price">£ 44.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img2.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">England</span>
-                        <span className="price">£ 49.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img3.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">2008</span>
-                        <span className="price">£ 39.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img4.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">LNA</span>
-                        <span className="price">£ 29.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img5.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">Diablo</span>
-                        <span className="price">£ 59.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img6.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">Beef</span>
-                        <span className="price">£ 24.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img7.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">Vince</span>
-                        <span className="price">£ 49.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img8.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">Tea</span>
-                        <span className="price">£ 24.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="product">
-                    <div className="photo">
-                        <img src="././img/img9.webp" alt='' />
-                    </div>
-                    <div className="description">
-                        <span className="name">London</span>
-                        <span className="price">£ 39.99</span>
-                        <div className="quantity-area">
-                            <button>-</button>
-                            <span className="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+       <section className = 'items'>
+            <h1>{shopName}</h1>
+            {
+              items.map(item => 
+                <Item item={item} />
+             )
 
-            <section className="summary">
-                <strong>Order Details</strong>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1x Joker</td>
-                            <td>£ 44.99</td>
-                        </tr>
-                        
-                        <tr>
-                            <th>Total</th>
-                            <th>£ 44.99</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
+            }
+            
+        </section>
+        <OrderSummary itemsInBag = {itemsInBag}/>
+          
+            
    
 
     </>
