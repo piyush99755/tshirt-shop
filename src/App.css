@@ -1,15 +1,13 @@
-
-
 body{
   
-  
+  margin:0;
   background-color:#282c34;
   display: flex;
   justify-content: center;
   align-items:flex-start;
   flex-wrap: wrap;
   padding: 20px 0;
-  width: 100%;
+  
  
   
 }
@@ -31,14 +29,13 @@ section.items{
   display: flex;
   flex-wrap: wrap;
   border: 1px solid lightgrey;
-  /* background-color: #26445e; */
   background-color:white;
   border-radius: 20px 0 20px 20px;
   padding: 20px;
-  width:900px;
-  max-width: 100%;
+  max-width: 900px;
   min-width: 300px;
   justify-content: center;
+  position:relative;
 }
 
 section.items .product{
@@ -109,4 +106,37 @@ section.items  .description .quantity-area .quantity {
 
 section.items  .description .quantity-area button:focus {
   outline:0;
+}
+
+section.summary{
+  
+  background-color: rgb(245, 245, 245);
+  padding: 30px;
+  text-align: center;
+  width:200px;
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  top:20px;
+  right:20px;
+  
+  
+  
+  
+}
+
+section.summary strong {
+  font-size: 14px;
+}
+
+section.summary table {
+
+  padding-top: 12px;
+  font-size: 16px;
+  
+}
+
+section.summary table tbody tr:last-of-type th {
+  border-top: 1px solid black;
+  padding: 10px 0;
 }
