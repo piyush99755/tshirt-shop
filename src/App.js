@@ -153,7 +153,7 @@ function App() {
             
             
         </section>
-        {itemsInBag.length > 0 && <OrderSummary />}
+        {itemsInBag.length > 0 && <OrderSummary itemsInBag = {itemsInBag} />}
           
             
    
