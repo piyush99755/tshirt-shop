@@ -17,11 +17,14 @@ function OrderSummary({itemsInBag}) {
                     </thead>
                     <tbody>
                         {
-                            itemsInBag.map(item =>
-                                <tr>
+                            itemsInBag.map(item => 
+                                <tr key={item.id}>
                                 <td>{item.quantity} x {item.name}</td>
                                 <td>£ {(item.quantity * item.price).toFixed(2)}</td>
-                                </tr>
+                                </tr >
+
+                            
+                                
                             )
                         }
                         

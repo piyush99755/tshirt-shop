@@ -18,7 +18,7 @@ h1{
   font-style: normal;
   font-size:40px;
   text-align:center;
-  margin-bottom:100px;
+  margin-bottom:35px;
   margin-top: 0;
   width: 100%;
 
@@ -32,7 +32,7 @@ section.items{
   background-color:white;
   border-radius: 20px 0 20px 20px;
   padding: 20px;
-  max-width: 900px;
+  max-width: 600px;
   min-width: 300px;
   justify-content: center;
   position:relative;
@@ -54,8 +54,8 @@ section.items .product.selected {
 }
 
 section.items img{
-  width:260px;
-  height:260px;
+  width:140px;
+  height:140px;
   
 }
 
@@ -139,4 +139,64 @@ section.summary table {
 section.summary table tbody tr:last-of-type th {
   border-top: 1px solid black;
   padding: 10px 0;
+}
+
+@media screen and (max-width: 1200px){
+  h1{
+    
+    margin-bottom:25px;
+    margin-top: 0;
+    width: 100%;
+  
+  }
+  section.items{
+  
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightgrey;
+    background-color:white;
+    border-radius: 20px 0 20px 20px;
+    padding: 20px;
+    max-width: 600px;
+    min-width: 300px;
+    justify-content: center;
+    position:relative;
+    
+  }
+  
+  section.summary{
+  
+    background-color: rgb(245, 245, 245);;
+    padding: 30px;
+    text-align: center;
+    width:200px;
+    height:auto;
+    margin-top:10px;
+    position:static;
+    bottom:30px;
+    
+    
+    
+    
+    
+    
+    
+  }
+  
+  section.summary strong {
+    font-size: 14px;
+  }
+  
+  section.summary table {
+  
+    padding-top: 12px;
+    font-size: 16px;
+    
+  }
+  
+  section.summary table tbody tr:last-of-type th {
+    border-top: 1px solid black;
+    padding: 10px 0;
+  }
+
 }
